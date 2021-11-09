@@ -3,15 +3,15 @@
 
 int main()
 {
-    float x1, y1, x2, y2, x3, y3, resAC, resBC, resSUM;
+    float x1, x2, x3, resAC, resBC, resSUM;
     printf("Введите координаты точки A через пробел: ");
-    scanf("%f%f", &x1, &y1);
+    scanf("%f", &x1);
     printf("Введите координаты точки B через пробел: ");
-    scanf("%f%f", &x2, &y2);
+    scanf("%f", &x2);
     printf("Введите координаты точки С через пробел: ");
-    scanf("%f%f", &x3, &y3);
-    resAC = sqrt(pow((x3 - x1), 2) + pow((y3 - y1), 2));
-    resBC = sqrt(pow((x3 - x2), 2) + pow((y3 - y2), 2));
+    scanf("%f", &x3);
+    resAC = fabs(x1 - x3);
+    resBC = fabs(x2 - x3);
     resSUM = resAC + resBC;
     printf("Длина отрезка АС равна: %f      Длина отрезка BC равна: %f      Сумма длин этих отрезков: %f", resAC, resBC,resSUM);
     return 0;
